@@ -1,0 +1,37 @@
+{
+    "name": "Water Hydro Post Processing",
+    "container": "wrfhydro-postprocess",
+    "pre_processing_stage": "python setup.py",
+    "execution_stage": "bash main.sh",
+    "slurm_input_rules": {
+           "time": {
+                "max": 60,
+                "min": 15,
+                "default_value": 10,
+                "step": 10,
+                "unit": "Minutes"   
+            },
+            "cpu_per_task": {
+                "max": 128,
+                "min": 16,
+                "default_value": 16,
+                "step": 16
+            }
+    },
+    "require_upload_data": false,
+    "param_rules": {
+        "input_a": {
+            "type":"string_option",
+            "require": true,
+            "default":"2020"
+        },
+        "input_b": {
+            "type": "string_option",
+            "require": true,
+            "default_value": "1708555341i9ik1"
+        }
+    },
+    "default_result_folder_downloadable_path": "/User_0",
+    "supported_hpc": ["aces_community", "anvil_community", "expanse_community", "keeling_community"],
+    "default_hpc": "keeling_community"
+}
