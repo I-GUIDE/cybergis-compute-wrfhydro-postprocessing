@@ -26,7 +26,7 @@
             "require": true,
             "default_value": "n/a"
         },
-        "year": {
+        "output_year": {
             "type": "string_input",
             "require": true,
             "default": "2020"
