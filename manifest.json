@@ -29,7 +29,7 @@
         "output_year": {
             "type": "string_input",
             "require": true,
-            "default": "2020"
+            "default_value": "2020"
         }
     },
     "supported_hpc": ["anvil_community"],
