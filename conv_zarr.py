@@ -34,7 +34,7 @@ output_wrfhydro="/compute_scratch"
 #year ='2018'
 #jobid='1708555341i9ik1' 
 year = os.getenv("param_output_year")
-jobid = os.getenv("param_wrfhyrdro_output_path")
+jobid = os.getenv("param_wrfhydro_output_path")
 
 if __name__ == '__main__':
     client = Client()
