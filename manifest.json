@@ -1,6 +1,7 @@
 {
     "name": "Water Hydro Post Processing",
     "container": "wrfhydro-postprocess",
+    "description": "Extract StreamFlow from WRFHydro simulation outputs",
     "pre_processing_stage": "python setup.py",
     "execution_stage": "bash main.sh",
     "slurm_input_rules": {
@@ -20,15 +21,15 @@
     },
     "require_upload_data": false,
     "param_rules": {
-        "year": {
-            "type":"string_input",
-            "require": true,
-            "default":"2020"
-        },
-        "output_path": {
+        "wrfhydro_output_path": {
             "type": "string_input",
             "require": true,
             "default_value": "n/a"
+        },
+        "year": {
+            "type": "string_input",
+            "require": true,
+            "default": "2020"
         }
     },
     "supported_hpc": ["anvil_community"],
