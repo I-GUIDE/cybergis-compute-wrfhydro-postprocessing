@@ -26,7 +26,7 @@ import pathlib
 #INPUT THAT IS HARDCODED AND IS OUGHT TO BE CHANGED BASED ON USER PREFERENCES IS THE YEAR AND DATA RANGE, YOU WANT THE CSV FILES TO BE GENERATED FOR
 
 #year='2018'
-year = os.getenv("year")
+year = os.getenv("param_output_year")
 
 # Specify date range of interest to create the csv files for the variables of interest
 dates=("{0}-01-01".format(year),"{0}-12-31".format(year))
