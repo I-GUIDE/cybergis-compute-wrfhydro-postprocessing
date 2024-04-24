@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 #imports
 import glob
 import logging
@@ -51,7 +50,7 @@ if __name__ == '__main__':
     def gen_json(u):
         with fsspec.open(u) as inf:
             h5chunks = SingleHdf5ToZarr(inf, u, inline_threshold=300)
-            with open(f"jsons/{u.split('/')[-1]}.json", 'wb') as outf:
+            with open(f"/job/result/jsons/{u.split('/')[-1]}.json", 'wb') as outf:
                outf.write(ujson.dumps(h5chunks.translate()).encode())
 
     dask.compute(*[dask.delayed(gen_json)(u) for u in files])

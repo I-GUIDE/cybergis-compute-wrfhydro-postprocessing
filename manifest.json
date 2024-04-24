@@ -2,7 +2,6 @@
     "name": "WRFHydro Post Processing",
     "container": "wrfhydro-postprocess",
     "description": "Extract StreamFlow from WRFHydro simulation outputs",
-    "pre_processing_stage": "python setup.py",
     "execution_stage": "bash main.sh",
     "slurm_input_rules": {
            "time": {
@@ -29,7 +28,7 @@
         "output_year": {
             "type": "string_input",
             "require": true,
-            "default_value": "2020"
+            "default_value": "2017"
         }
     },
     "supported_hpc": ["anvil_community"],
