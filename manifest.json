@@ -1,5 +1,5 @@
 {
-    "name": "Water Hydro Post Processing",
+    "name": "WRFHydro Post Processing",
     "container": "wrfhydro-postprocess",
     "description": "Extract StreamFlow from WRFHydro simulation outputs",
     "pre_processing_stage": "python setup.py",
