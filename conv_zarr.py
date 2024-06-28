@@ -64,7 +64,7 @@ if __name__ == '__main__':
     skip_instance_cache=True
 )
     m = fs.get_mapper("")
-    ds = xr.open_dataset(m, engine='zarr').chunk(chunks={"time":67, "feature_id":10000})
+    ds = xr.open_dataset(m, engine='zarr')
 
     print("Successfully read the information from the combined json and output it as a xarray dataset")
     print(ds)
